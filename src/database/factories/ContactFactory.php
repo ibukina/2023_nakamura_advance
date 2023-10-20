@@ -15,6 +15,7 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
+            'management_id'=>$this->faker->numberBetween(1),
             'fullname'=>$this->faker->name,
             'gender'=>$this->faker->numberBetween(1,2),
             'email'=>$this->faker->safeEmail,

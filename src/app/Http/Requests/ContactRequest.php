@@ -28,7 +28,7 @@ class ContactRequest extends FormRequest
             'gender'=>['required'],
             // , 'numeric'
             'email'=>['required','string', 'email', 'max:255'],
-            'postcode'=>['required', 'max:8'],
+            'postcode'=>['required', 'max:8','regex:/^[0-9]{3}-[0-9]{4}$/'],
             // 'regex:/^[0-9]{3}-[0-9]{4}$/'
             'address'=>['required', 'string', 'max:255'],
             'building_name'=>['string', 'max:255', 'nullable'],

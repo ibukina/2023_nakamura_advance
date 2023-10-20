@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Contact;
 
 class Management extends Model
 {
@@ -11,10 +12,10 @@ class Management extends Model
 
     protected $fillable=['name'];
 
-    // public function contacts()
-    // {
-        // return $this->hasMany(Contact::class);
-    // }
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
+    }
 
     public function scopeFullnameSearch($query, $fullname)
     {

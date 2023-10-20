@@ -48,7 +48,7 @@
     <div class="result_container">
         <div class="result_page">
             <div class="result_page-number">
-                全<!-- 取得件数 -->件中  <!-- 表示件数 -->~<!-- 表示件数 -->件
+                全{{ count($management) }}件中  <!-- 表示件数 -->~<!-- 表示件数 -->件
             </div>
             <div class="result_page-switching">
             </div>
@@ -65,22 +65,23 @@
                 <th class="table-header">ご意見</th>
                 <th class="table-header"></th>
             </tr>
-            @foreach($contacts as $contact)
+            @if($managements->has('management'))
+            @foreach($managements as $management)
             <tr class="table-row">
                 <td class="table-data">
-                    {{$contact['id'] }}
+                    {{ $management['id'] }}
                 </td>
                 <td class="table-data">
-                    {{ $contact['fullname'] }}
+                    {{ $management['fullname'] }}
                 </td>
                 <td class="table-data">
-                    {{ $contact['gender'] }}
+                    {{ $management['gender'] }}
                 </td>
                 <td class="table-data">
-                    {{ $contact['email'] }}
+                    {{ $management['email'] }}
                 </td>
                 <td class="table-data">
-                    {{ $contact['opinion'] }}
+                    {{ $management['opinion'] }}
                 </td>
                 <td class="table-data">
                     <div class="result-table_button">
@@ -90,6 +91,7 @@
                 </td>
             </tr>
             @endforeach
+            @endif
         </table>
         </form>
     </div>

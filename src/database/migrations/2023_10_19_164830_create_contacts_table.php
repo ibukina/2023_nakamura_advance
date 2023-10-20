@@ -16,6 +16,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->foreignId('management_id')->constrained('managements', 'management_id')->cascadeOnDelete();
             $table->string('fullname');
             $table->integer('gender');
             $table->string('email');
