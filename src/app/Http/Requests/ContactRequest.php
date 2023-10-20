@@ -32,7 +32,7 @@ class ContactRequest extends FormRequest
             // 'regex:/^[0-9]{3}-[0-9]{4}$/'
             'address'=>['required', 'string', 'max:255'],
             'building_name'=>['string', 'max:255', 'nullable'],
-            'opinion'=>['text', 'required', 'max:120']
+            'opinion'=>['string', 'required', 'max:120']
         ];
     }
 
@@ -56,7 +56,7 @@ class ContactRequest extends FormRequest
             'building_name.string'=>'建物名を文字列で入力してください',
             'building_name.max'=>'建物名を255文字以下で入力してください',
             'opinion.required'=>'ご意見を入力してください',
-            'opinion.text'=>'ご意見をテキストで入力してください',
+            'opinion.string'=>'ご意見を文字列で入力してください',
             'opinion.max'=>'ご意見を120文字以下で入力してください',
         ];
     }

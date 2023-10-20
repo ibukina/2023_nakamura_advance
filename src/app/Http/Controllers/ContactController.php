@@ -23,7 +23,7 @@ class ContactController extends Controller
             // 'postcode'=>['required', 'max:8',],
             // 'address'=>['required', 'string', 'max:255',],
             // 'building_name'=>['string', 'max:255', 'nullable',],
-            // 'opinion'=>['text', 'required', 'max:120'],
+            // 'opinion'=>['string', 'required', 'max:120'],
         // ]);
         // $validator->validate();
 
@@ -34,12 +34,12 @@ class ContactController extends Controller
             // 'postcode'=>['required', 'max:8'],
             // 'address'=>['required', 'string', 'max:255'],
             // 'building_name'=>['string', 'max:255', 'nullable'],
-            // 'opinion'=>['text', 'required', 'max:120'],
+            // 'opinion'=>['string', 'required', 'max:120'],
         // ]);
         
-        $contact = $request->all();
-        // $contact = $request->only(['fullname','gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
-        // $result=is_array($contact);
+        // $contact = $request->all();
+        $contact = $request->only(['fullname','gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
+        // $result=count($contact);
         // echo $result;
 
         return view('confirm', compact('contact'));

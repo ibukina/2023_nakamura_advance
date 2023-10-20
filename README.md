@@ -33,10 +33,10 @@ phpMyAdmin 5.2.1
 ## テーブル設計
 
 contactsTable  
-![localhost_8080_index php_route=_table_structure db=laravel_db table=contacts (1)](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/71180aad-e1be-4c70-b694-31f672160ab5)
+![localhost_8080_index php_route=_table_structure db=laravel_db table=contacts](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/c2bdd216-c50b-4802-9129-21059cb636e0)
 
 managementsTable  
-![localhost_8080_index php_route=_table_structure db=laravel_db table=managements](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/4b55bb06-64d1-46ba-8ec6-d9b4aa4740f1)
+![localhost_8080_index php_route=_sql pos=0 db=laravel_db table=managements](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/708be2a9-ad17-4746-85c6-fda89fe8f750)
 
 ## ER 図
 
@@ -44,4 +44,4 @@ managementsTable
 
 ## 補足
 
-エラーに対応できず、未完成です。申し訳ございません。
+エラーに対応できておらず、未完成です。申し訳ございません。
