@@ -1,0 +1,50 @@
+.confirm-form_container,
+.create-form_container,
+.management_content {
+    text-align: center;
+}
+
+.confirm-form_title,
+.create-form_title,
+.management_title {
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.confirm-form,
+.create-form {
+    align-items: center;
+    margin: 50px 50px 10px;
+}
+
+.confirm-form_button,
+.create-form_button,
+.search-form_button {
+    margin-top: 50px;
+}
+
+.confirm-form_button-submit,
+.create-form_button-submit {
+    padding: 20px 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 25px;
+    color: white;
+}
+
+.create-form_table,
+.confirm-form_table {
+    width: 100%;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-header {
+    padding: 20px 50px;
+    font-size: 25px;
+}
