@@ -16,7 +16,7 @@ http://localhost/managements
 を設定しています。
 
 ↓ こちらがトップ画像です。  
-![localhost_](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/1cfc662b-abba-4284-9656-23ceda8b8711)
+![localhost_](https://github.com/ibukina/2023_nakamura_advance/assets/142294463/1eb7e9d1-54d6-429c-b709-81e9bd4cdcbe)
 
 ## 作成した目的
 
