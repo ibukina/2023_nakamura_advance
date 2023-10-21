@@ -58,6 +58,18 @@
     justify-content: space-between;
 }
 
+.table-row:nth-of-type(n+2){
+    display: none;
+}
+
+.omission{
+    display: none;
+}
+
+.table-row:nth-of-type(n+2) ~ .omission{
+    display: inline-block;
+}
+
 .table-header {
     border-bottom: 3px solid black;
     font-size: 23px;

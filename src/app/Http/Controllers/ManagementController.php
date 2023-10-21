@@ -10,18 +10,20 @@ class ManagementController extends Controller
 {
     public function index()
     {
-        // $managements=Management::$contacts->all();
-
-        return view('management', compact('contacts'));
+        return view('management');
     }
 
     public function search(Request $request)
     {
-        $contacts=Management::FullnameSearch($request->fullname)->GenderSearch($request->gender)->Created_atSearch($request->created_at)->EmailSearch($request->email)->get();
+        $managements=Management::FullnameSearch($request->fullname)->GenderSearch($request->gender)->Created_atSearch($request->created_at)->EmailSearch($request->email)->get();
 
-        $contacts=Managements::Paginate(10);
+        $managements=Managements::Paginate(10);
 
-        return view('management', compact('contacts'));
+        // $result=count($managements);
+        // echo $result;
+        info($managements);
+
+        return view('management', compact('managements'));
     }
 
     public function destroy(Request $request)

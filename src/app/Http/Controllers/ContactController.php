@@ -38,11 +38,13 @@ class ContactController extends Controller
         // ]);
         
         // $contact = $request->all();
-        $contact = $request->only(['fullname','gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
+        $fullname=$request->only(['fullname'['last_name'],'fullname'['first_name']]);
+        $contacts = $fullname . $request->only(['gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
         // $result=count($contact);
         // echo $result;
+        // var_dump($contact);
 
-        return view('confirm', compact('contact'));
+        return view('confirm', compact('contacts'));
     }
 
     public function store(ContactRequest $request)

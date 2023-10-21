@@ -10,7 +10,7 @@
     <form class="confirm-form" action="/contacts" method="post">
         @csrf
         <table class="confirm-form_table">
-            @foreach{{$contact}}
+            @foreach{{$contacts as $contact}}
             <tr class="table-row">
                 <th class="table-header">お名前</th>
                 <td class="table-data">

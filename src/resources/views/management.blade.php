@@ -48,7 +48,7 @@
     <div class="result_container">
         <div class="result_page">
             <div class="result_page-number">
-                全{{ count($management) }}件中  <!-- 表示件数 -->~<!-- 表示件数 -->件
+                全{{ count($managements) }}件中  <!-- 表示件数 -->~<!-- 表示件数 -->件
             </div>
             <div class="result_page-switching">
             </div>
@@ -65,33 +65,32 @@
                 <th class="table-header">ご意見</th>
                 <th class="table-header"></th>
             </tr>
-            @if($managements->has('management'))
-            @foreach($managements as $management)
-            <tr class="table-row">
-                <td class="table-data">
-                    {{ $management['id'] }}
-                </td>
-                <td class="table-data">
-                    {{ $management['fullname'] }}
-                </td>
-                <td class="table-data">
-                    {{ $management['gender'] }}
-                </td>
-                <td class="table-data">
-                    {{ $management['email'] }}
-                </td>
-                <td class="table-data">
-                    {{ $management['opinion'] }}
-                </td>
-                <td class="table-data">
-                    <div class="result-table_button">
-                        <input type="hidden" name="id" value="{{$contact['id']}}">
-                        <button class="result-table_button-submit">削除</button>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
-            @endif
+                @foreach($managements as $management)
+                <tr class="table-row">
+                    <td class="table-data">
+                        {{ $management['id'] }}
+                    </td>
+                    <td class="table-data">
+                        {{ $management['fullname'] }}
+                    </td>
+                    <td class="table-data">
+                        {{ $management['gender'] }}
+                    </td>
+                    <td class="table-data">
+                        {{ $management['email'] }}
+                    </td>
+                    <td class="table-data">
+                        {{ $management['opinion'] }}
+                    </td>
+                    <td class="table-data">
+                        <div class="result-table_button">
+                            <input type="hidden" name="id" value="{{$contact['id']}}">
+                            <button class="result-table_button-submit">削除</button>
+                        </div>
+                    </td>
+                </tr>
+                <div class="omission"><a href="#"></a></div>
+                @endforeach
         </table>
         </form>
     </div>

@@ -18,11 +18,11 @@
                 <th class="table-header">お名前</th>
                 <td class="table-data">
                     <label class="table-data_item">
-                        <input class="table-data_item-name"  type="name" name="fullname" value="{{ old('fullname') }}">
+                        <input class="table-data_item-input table-data_item-name"  type="name" name="fullname[][last_name]" value="{{ old('last_name') }}">
                     </label>
-                    <!-- <label class="table-data_item"> -->
-                        <!-- <input class="table-data_item-name" type="name" name="fullname"> -->
-                    <!-- </label> -->
+                    <label class="table-data_item">
+                        <input class="table-data_item-input table-data_item-name" type="name" name="fullname[][first_name]" value="{{ old('first_name') }}">
+                    </label>
                 </td>
             </tr>
             @if ($errors->has('fullname'))
@@ -37,10 +37,10 @@
                 <th class="table-header">性別</th>
                 <td class="table-data">
                     <label class="table-data_item">
-                        <input class="table-data_item-input table-data_item-radio" type="radio" name="gender" value="1" checked>男性
+                        <input class="table-data_item-input table-data_item-radio" type="radio" name="gender[][1][男性]" value="{{ old('1') }}" checked>男性
                     </label>
                     <label class="table-data_item">
-                        <input class="table-data_item-input table-data_item-radio" type="radio" name="gender" value="2">女性
+                        <input class="table-data_item-input table-data_item-radio" type="radio" name="gender[][2][女性]" value="{{ old('2') }}">女性
                     </label>
                 </td>
             </tr>
